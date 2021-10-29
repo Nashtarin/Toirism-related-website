@@ -17,7 +17,7 @@ const Login = () => {
             }).finally(() => setIsLoading(false))
     }
     return (
-        <div>
+        <div className="my-5">
 
             <h1 className="text-success">Please Login</h1>
             <Button onClick={handleGoogleLogin} variant="success">Google Sign in</Button>
