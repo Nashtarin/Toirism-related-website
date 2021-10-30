@@ -34,7 +34,7 @@ function App() {
               <Offerings></Offerings>
 
             </Route>
-            <PrivateRoute path="/offerdetail">
+            <PrivateRoute path="/offerdetail/:offerId">
               <Offerdetail></Offerdetail>
             </PrivateRoute>
             <Route path='*'>

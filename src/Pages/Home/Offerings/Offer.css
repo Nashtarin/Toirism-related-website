@@ -1,0 +1,10 @@
+.offer{
+    background-color:rgb(181, 209, 125);
+    border: 1px solid green;
+    border-radius: 20px;
+}
+.offer img{
+    height: 150px;
+    padding:4px;
+    border-radius:15px;
+}

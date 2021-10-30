@@ -1,0 +1,10 @@
+a{
+    text-decoration:none;
+    font-size:medium;
+    color:green;
+    font-weight: 700;
+}
+a:hover{
+    
+    color:rgb(50, 199, 100);
+}

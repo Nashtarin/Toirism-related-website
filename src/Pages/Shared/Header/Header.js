@@ -3,6 +3,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import logo from '../../../Images/Capture22-removebg-preview.png'
+import './Header.css'
 
 const Header = () => {
     const { logout, googleSignIn, user } = useAuth()

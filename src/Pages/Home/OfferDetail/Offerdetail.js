@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 const Offerdetail = () => {
     return (
         <div>
