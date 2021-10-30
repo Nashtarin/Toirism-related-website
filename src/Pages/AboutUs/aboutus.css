@@ -1,0 +1,10 @@
+.about{
+    border:1px solid darkslategrey;
+    border-radius: 25px;
+    background-color:rgb(145, 194, 61);
+   padding:2px;
+    margin:10px;
+    text-align: center;
+
+    
+}

@@ -6,18 +6,18 @@ import hajj1 from '../../Images/offers images/hajj.jpeg'
 import hajj2 from '../../Images/offers images/hajj.jpg'
 
 const Home = () => {
-    const [offer, setOffer] = useState([]);
+    const [offers, setOffers] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/offers')
             .then(res => res.json())
-            .then(data => setOffer(data))
+            .then(data => setOffers(data))
     }, [])
     return (
         <div>
             <Banner></Banner>
             <h1 className='text-success'>Our Offers</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4 mx-5 my-3">
-                {offer.map(ofr => <Offerings
+                {offers.map(ofr => <Offerings
                     key={ofr._id}
                     offers={ofr}>
 

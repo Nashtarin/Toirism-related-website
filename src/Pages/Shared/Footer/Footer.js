@@ -12,7 +12,7 @@ const Footer = () => {
                     <img src={logo} alt="" />
                     <p className="text-white"><FontAwesomeIcon icon={faPhone} /> 01678877987,01786656768</p>
                     <p className="text-white"><FontAwesomeIcon icon={faEnvelope} /> info@roamtheworld.com</p>
-                    <p className="text-white ms-4"><FontAwesomeIcon icon={faLandmark} /> Ring Road,Mohammadpur,Dhaka</p>
+                    <p className="text-white ms-4"><FontAwesomeIcon icon={faLandmark} /> 2/3, Block-A,Tajamahal Road ,Mohammadpur,Dhaka-1207</p>
 
                 </div>
             </div>

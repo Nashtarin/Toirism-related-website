@@ -10,6 +10,8 @@ import Login from './Pages/Login/Login';
 import AuthProvider from './Pages/Context/AuthProvider';
 import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
+import Aboutus from './Pages/AboutUs/Aboutus';
+import Contactus from './Pages/ContactUs/Contactus';
 
 function App() {
   return (
@@ -34,7 +36,15 @@ function App() {
               <Offerings></Offerings>
 
             </Route>
-            <PrivateRoute path="/offerdetail/:offerId">
+            <Route path='/aboutus'>
+              <Aboutus></Aboutus>
+
+            </Route>
+            <Route path='/contactus'>
+              <Contactus></Contactus>
+
+            </Route>
+            <PrivateRoute path="/offers/:offerId">
               <Offerdetail></Offerdetail>
             </PrivateRoute>
             <Route path='*'>
