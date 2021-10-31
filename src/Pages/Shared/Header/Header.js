@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import logo from '../../../Images/Capture22-removebg-preview.png'
@@ -27,8 +27,14 @@ const Header = () => {
                             >
                                 <Nav.Link ><Link to='/home'>Home</Link></Nav.Link>
                                 <Nav.Link ><Link to='/aboutus'>About Us</Link></Nav.Link>
-                              
+
                                 <Nav.Link ><Link to='/contactus'>Contact Us</Link></Nav.Link>
+                                {user.email && <NavDropdown  title="Dashboard" id="basic-nav-dropdown">
+                                    <NavDropdown.Item ><Link to='/myorders'>My Orders</Link></NavDropdown.Item>
+                                    <NavDropdown.Item><Link to='/manageallorders'>Manage All Orders</Link></NavDropdown.Item>
+                                    <NavDropdown.Item ><Link to='/addanewoffer'>Add A New Offer</Link></NavDropdown.Item>
+                                    
+                                </NavDropdown>}
 
 
                                 {user.email ? <div><span>{user.displayName}  </span><Button onClick={logout} className='me-3' variant="primary">Logout</Button></div> :

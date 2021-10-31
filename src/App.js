@@ -12,6 +12,10 @@ import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import Aboutus from './Pages/AboutUs/Aboutus';
 import Contactus from './Pages/ContactUs/Contactus';
+import addANewService from './Pages/DropdownMenus/AddaNewOffer/AddaNewOffer';
+import ManageAllOrders from './Pages/DropdownMenus/ManageAllOrders/ManageAllOrders';
+import MyOrders from './Pages/DropdownMenus/MyOrders/MyOrders';
+import AddaNewOffer from './Pages/DropdownMenus/AddaNewOffer/AddaNewOffer';
 
 function App() {
   return (
@@ -43,6 +47,16 @@ function App() {
             <Route path='/contactus'>
               <Contactus></Contactus>
 
+            </Route>
+            <Route path="/addanewoffer">
+              <AddaNewOffer></AddaNewOffer>
+              
+            </Route>
+            <Route path="/manageallorders">
+              <ManageAllOrders></ManageAllOrders>
+            </Route>
+            <Route path="/myorders">
+              <MyOrders></MyOrders>
             </Route>
             <PrivateRoute path="/offers/:offerId">
               <Offerdetail></Offerdetail>

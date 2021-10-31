@@ -3,3 +3,21 @@
     border:1.5px solid green;
     border-radius: 20px;
 }
+.addoffer form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.addoffer input,textarea{
+    width: 70%;
+    margin-bottom: 10px;
+    
+
+}
+.addoffer{
+    border: 1.5px solid green ;
+    background-color: rgb(163, 221, 163);
+    height: 500px;
+    border-radius: 30px;
+}
