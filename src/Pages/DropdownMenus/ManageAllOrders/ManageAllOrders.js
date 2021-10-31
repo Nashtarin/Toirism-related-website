@@ -1,3 +1,4 @@
+import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../Hooks/useAuth';
 import SingleManageOrder from './SingleMangeOrder/SingleManageOrder';
@@ -28,6 +29,27 @@ const ManageAllOrders = () => {
             })
 
     }
+    const handleUpdate = id => {
+        const url = `http://localhost:5000/orders/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orders)
+        })
+            .then(res => res.json())
+            .then(data => { console.log(data)
+                if (data.modifiedCount>0) {
+                    alert('Update Successful');
+                    window.location.reload()
+                    
+                   
+                   
+                }
+            })
+      
+    }
 
     return (
       <div>
@@ -38,7 +60,8 @@ const ManageAllOrders = () => {
             { orders?.map(order => <SingleManageOrder
                 key={order._id}
                 orders={order}
-                handleDelete={handleDelete}>
+                handleDelete={handleDelete}
+                handleUpdate={handleUpdate}>
                 </SingleManageOrder>)}
 
         </div>

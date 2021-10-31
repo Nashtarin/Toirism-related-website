@@ -30,6 +30,7 @@ const AddaNewOffer = () => {
                 <input  {...register("Cost")} placeholder="Enter The Offer Cost" />
                 <textarea  {...register("Description")} placeholder="Enter The Offer Description" />
                 <input  {...register("facilities")} placeholder="Enter The Offer facilities" />
+                
                 <input  {...register("img")} placeholder="Enter The Offer Image URL" />
                 <input className="btn btn-success" type="submit" value="Add a Offer" />
             </form>

@@ -37,6 +37,27 @@ const MyOrders = () => {
             })
 
     }
+    const handleUpdate = id => {
+        const url = `http://localhost:5000/orders/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orders)
+        })
+            .then(res => res.json())
+            .then(data => { console.log(data)
+                if (data.modifiedCount>0) {
+                    alert('Update Successful');
+                    window.location.reload()
+                    
+                   
+                   
+                }
+            })
+      
+    }
 
     return (
         <div>
@@ -45,7 +66,8 @@ const MyOrders = () => {
             {myorders?.map(mo=><SingleMyOrder
             key={mo._id}
             orders={mo}
-            handleDelete={handleDelete}></SingleMyOrder>)}
+            handleDelete={handleDelete}
+            handleUpdate={handleUpdate}></SingleMyOrder>)}
             </div>
         </div>
     );

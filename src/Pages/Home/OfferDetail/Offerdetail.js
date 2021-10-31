@@ -72,6 +72,7 @@ const Offerdetail = () => {
                     <input  {...register("NID")} placeholder="Enter Your NID Number"/>
                     <input  {...register("passport")} placeholder="Enter Your Valid Passport Number"/>
                     <input defaultValue={Cost} {...register("cost",{ required: true })}  />
+                    <input defaultValue="Pending" {...register("status")}  />
 
                     
                     {errors.tour && <span className="text-danger">Choose Your Tour,it is required</span>}

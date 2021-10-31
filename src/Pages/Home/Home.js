@@ -20,6 +20,7 @@ const Home = () => {
             <div className="row row-cols-1 row-cols-md-3 g-4 mx-5 my-3">
                 {offers.length===0?<Spinner style={{marginLeft:"500px"}}animation="border" variant="primary" />:offers.map(ofr => <Offerings
                     key={ofr._id}
+                   
                     offers={ofr}>
 
                 </Offerings>)}
