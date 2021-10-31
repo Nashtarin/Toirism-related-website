@@ -39,17 +39,6 @@ const Offerdetail = () => {
             }
         })};
 
-
-
-
-    // axios.post('', data)
-    //     .then(res => {
-    //         console.log(res)
-    //         if (res.data.insertedId) {
-    //             alert('Added Successfully');
-    //             reset();
-    //         }
-    //     })
     
 
     return (
@@ -71,14 +60,7 @@ const Offerdetail = () => {
 
             <div className="col addoffer my-5">
                 <h1 className="text-success mt-3">Please Enter Your Details</h1>
-                {/* <form onSubmit={handleSubmit(onSubmit)}>
-                <input defaultValue={user.displayName} {...register("name", { required: true, maxLength: 20 })}  />
-                <input defaultValue={user.email} {...register("email", { required: true, maxLength: 20 })}  />
-                 <textarea {...register("address")} placeholder="address" /> 
-                
-                <input defaultValue={name} {...register("tour")} placeholder=" The tour you are interested" />
-                <input type="submit" />
-            </form> */}
+               
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {/* register your input into the hook by invoking the "register" function */}
                    

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 const SingleMyOrder = (props) => {
     const {name,_id,email,tour,phone,address,NID,passport,cost}=props.orders
+    const {handleDelete}=props
     return (
         <div className="col">
         <div className="card offer h-100">
@@ -22,10 +23,9 @@ const SingleMyOrder = (props) => {
                 <h6><FontAwesomeIcon icon={faPassport} /> Passport:{passport}</h6>
                 <h5 className="text-success fw-bold"><FontAwesomeIcon icon={faMoneyBill} /> Cost:BDT {cost}</h5>
      
-              
-                <Link to={`/offers/${_id}`}>
-                    <Button variant="success">Delete</Button>
-                </Link>
+           
+                    <Button onClick={()=>handleDelete(_id)} variant="success">Delete</Button>
+                
             </div>
         </div>
 

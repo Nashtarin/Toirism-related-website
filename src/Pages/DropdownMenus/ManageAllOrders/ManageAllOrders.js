@@ -10,6 +10,24 @@ const ManageAllOrders = () => {
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
+    const handleDelete = id => {
+        const url = `http://localhost:5000/orders/${id}`
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.deletedCount){
+                    alert('Deleted')
+                    const remaining=orders.filter(order=>order._id!==id)
+                    setOrders(remaining)
+                    
+                }
+               
+            })
+
+    }
 
     return (
       <div>
@@ -17,9 +35,10 @@ const ManageAllOrders = () => {
             <div className="row row-cols-1 row-cols-md-3 g-4 mx-5 my-3">
             
            {console.log(orders)}
-            {orders?.map(order => <SingleManageOrder
+            { orders?.map(order => <SingleManageOrder
                 key={order._id}
-                orders={order}>
+                orders={order}
+                handleDelete={handleDelete}>
                 </SingleManageOrder>)}
 
         </div>

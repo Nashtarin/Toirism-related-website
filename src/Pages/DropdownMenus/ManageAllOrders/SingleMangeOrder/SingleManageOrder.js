@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 const SingleManageOrder = (props) => {
     const [orders,setOrders]=useState({})
     const {name,_id,email,tour,phone,address,NID,passport,cost}=props.orders
-    const {handleDelete}=props.handleDelete
+    const {handleDelete}=props
+    
  
     return (
         <div className="col">
@@ -24,9 +25,8 @@ const SingleManageOrder = (props) => {
                 <h5 className="text-success fw-bold"><FontAwesomeIcon icon={faMoneyBill} /> Cost:BDT {cost}</h5>
      
               
-                <Link to={`/offers/${_id}`}>
-                    <Button variant="success">Delete</Button>
-                </Link>
+                    <Button onClick={()=>handleDelete(_id)} variant="success">Delete</Button>
+         
             </div>
         </div>
 

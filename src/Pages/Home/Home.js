@@ -4,6 +4,7 @@ import Banner from './Banner/Banner';
 import Offerings from './Offerings/Offerings';
 import hajj1 from '../../Images/offers images/hajj.jpeg'
 import hajj2 from '../../Images/offers images/hajj.jpg'
+import { Spinner } from 'react-bootstrap';
 
 const Home = () => {
     const [offers, setOffers] = useState([]);
@@ -17,7 +18,7 @@ const Home = () => {
             <Banner></Banner>
             <h1 className='text-success'>Our Offers</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4 mx-5 my-3">
-                {offers.map(ofr => <Offerings
+                {offers.length===0?<Spinner style={{marginLeft:"500px"}}animation="border" variant="primary" />:offers.map(ofr => <Offerings
                     key={ofr._id}
                     offers={ofr}>
 
