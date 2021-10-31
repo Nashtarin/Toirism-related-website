@@ -6,7 +6,7 @@ import SingleMyOrder from './SingleMyOrder/SingleMyOrder';
 const MyOrders = () => {
     const [orders, setOrders] = useState();
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://ghostly-dungeon-91626.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 
@@ -20,7 +20,7 @@ const MyOrders = () => {
    
     const myorders=orders?.filter(myorder=>myorder.email===user.email)
     const handleDelete = id => {
-        const url = `http://localhost:5000/orders/${id}`
+        const url = `https://ghostly-dungeon-91626.herokuapp.com/orders/${id}`
         fetch(url, {
             method: 'DELETE'
         })
@@ -38,7 +38,7 @@ const MyOrders = () => {
 
     }
     const handleUpdate = id => {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://ghostly-dungeon-91626.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

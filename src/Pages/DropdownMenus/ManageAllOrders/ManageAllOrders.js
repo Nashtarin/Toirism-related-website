@@ -7,12 +7,12 @@ const ManageAllOrders = () => {
     const [orders, setOrders] = useState();
  
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://ghostly-dungeon-91626.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
     const handleDelete = id => {
-        const url = `http://localhost:5000/orders/${id}`
+        const url = `https://ghostly-dungeon-91626.herokuapp.com/orders/${id}`
         fetch(url, {
             method: 'DELETE'
         })
@@ -20,7 +20,7 @@ const ManageAllOrders = () => {
             .then(data => {
                 console.log(data)
                 if(data.deletedCount){
-                    alert('Deleted')
+                    alert('Are you sure you want to delete?')
                     const remaining=orders.filter(order=>order._id!==id)
                     setOrders(remaining)
                     
@@ -30,7 +30,7 @@ const ManageAllOrders = () => {
 
     }
     const handleUpdate = id => {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://ghostly-dungeon-91626.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

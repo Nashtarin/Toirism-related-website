@@ -14,7 +14,7 @@ const Offerdetail = () => {
     // console.log(offerId)
     const [offer, setOffer] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/offers/${offerId}`)
+        fetch(`https://ghostly-dungeon-91626.herokuapp.com/offers/${offerId}`)
             .then(res => res.json())
             .then(data => setOffer(data))
     }, [])
@@ -23,7 +23,7 @@ const Offerdetail = () => {
     //    
     const {  register, handleSubmit, reset,formState: { errors } } = useForm()
     const onSubmit = data => {console.log(data)
-        fetch('http://localhost:5000/orders',{
+        fetch('https://ghostly-dungeon-91626.herokuapp.com/orders',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -43,6 +43,7 @@ const Offerdetail = () => {
 
     return (
         <div className="row row-cols-1 row-cols-md-2 g-2 mx-5 my-3">
+           
             <div className="col">
                 <div className="offerdetail card mx-auto my-4" style={{ width: '95%' }}>
                     <img style={{ height: "300px", borderRadius: "25px" }} src={img} className="card-img-top p-1" alt="..." />

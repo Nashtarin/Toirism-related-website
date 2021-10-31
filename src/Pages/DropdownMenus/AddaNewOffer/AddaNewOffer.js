@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 const AddaNewOffer = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {console.log(data)
-        fetch('http://localhost:5000/offers',{
+        fetch('https://ghostly-dungeon-91626.herokuapp.com/offers',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

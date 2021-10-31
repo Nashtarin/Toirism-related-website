@@ -9,7 +9,7 @@ import { Spinner } from 'react-bootstrap';
 const Home = () => {
     const [offers, setOffers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/offers')
+        fetch('https://ghostly-dungeon-91626.herokuapp.com/offers')
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])
